@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="project.css" />
+  <title>My Journal</title>
+</head>
+<body>
+  <header>
+    <h1>My Journal</h1>
+  </header>
+
+  <main>
+    <section class="card" aria-labelledby="write-title">
+      <div class="card-header">
+        <h2 id="write-title">Write a new entry</h2>
+      </div>
+      <form id="journal-form">
+        <div>
+          <label for="entry-title">Title</label>
+          <input id="entry-title" name="title" type="text" placeholder="Today's headline..." maxlength="120" />
+        </div>
+        <div>
+          <label for="entry-content">Entry</label>
+          <textarea id="entry-content" name="content" placeholder="Let it out. What mattered today?"></textarea>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn-secondary" id="clear-draft">Clear</button>
+          <button type="submit" class="btn-primary">Save entry</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="list" aria-labelledby="entries-title">
+      <h2 id="entries-title" style="margin:1rem 0 0.5rem;">Your entries</h2>
+      <div id="entries"></div>
+      <p id="empty" class="empty">No entries yet. Your first page is waiting.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>This journal saves locally in your browser. Your words stay on this device.</p>
+  </footer>
+
+    <script src="project.js"></script>
+</body>
+</html>
